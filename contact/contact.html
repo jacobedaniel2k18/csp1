@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=display-width initial-scale=1.0, maximum-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>Capstone Project 1</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/contact.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+
+<body>
+  
+<!--
+/
+/
+/
+/
+/ 
+HEADER
+/
+/
+/
+/
+/
+-->
+
+  <div class="header">
+
+      <a href="#default" class="logo"><img src="assets/img/logo.jpg" class="logo1 img-responsive"></a>
+
+      <div class="header-right">
+
+        <a class="active" href="#home">Home</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+
+      </div>
+
+  </div>
+
+<!-- HEADER END -->
+
+<!--
+/
+/
+/
+/
+/ 
+OPENING IMAGE
+/
+/
+/
+/
+/
+-->
+
+  <img src="assets/img/maokai.jpg" alt="Nature" class="responsive">
+
+<!-- OPENING IMAGE END -->
+
+<!--
+/
+/
+/
+/
+/ 
+CONTACT SECTION
+/
+/
+/
+/
+/
+-->
+
+  <div class="container7">
+
+    <div style="text-align:center">
+
+      <h2>Contact Us</h2>
+      <p>Swing by for a cup of coffee, or leave us a message:</p>
+    </div>
+
+    <div class="row7">
+
+      <div class="column7">
+
+        <div id="map" style="width:100%;height:500px"></div>
+
+      </div>
+
+    <div class="column7">
+
+      <form action="/action_page.php">
+        
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+
+      </form>
+
+    </div>
+
+    </div>
+
+  </div>
+
+
+<script>
+
+// Initialize google maps
+function myMap() {
+
+  var myCenter = new google.maps.LatLng(51.508742,-0.120850);
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: myCenter, zoom: 12};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
+
+}
+
+</script>
+
+<!-- CONTACT SECTION END -->
+
+<!-- 
+  /
+  /
+  /
+  /
+  /
+QUOTES SLIDESHOW
+  /
+  /
+  /
+  /
+  /
+  /
+ -->
+
+  <div class="slideshow-container4">
+
+    <div class="mySlides4">
+      <q>I love you the more in that I believe you had liked me for my own sake and for nothing else</q>
+      <p class="author4">- John Keats</p>
+    </div>
+
+    <div class="mySlides4">
+      <q>But man is not made for defeat. A man can be destroyed but not defeated.</q>
+      <p class="author4">- Ernest Hemingway</p>
+    </div>
+
+    <div class="mySlides4">
+      <q>I have not failed. I've just found 10,000 ways that won't work.</q>
+      <p class="author4">- Thomas A. Edison</p>
+    </div>
+
+    <a class="prev4" onclick="plusSlides(-1)">❮</a>
+    <a class="next4" onclick="plusSlides(1)">❯</a>
+
+  </div>
+
+  <div class="dot-container4">
+    <span class="dot4" onclick="currentSlide(1)"></span> 
+    <span class="dot4" onclick="currentSlide(2)"></span> 
+    <span class="dot4" onclick="currentSlide(3)"></span> 
+  </div>
+
+<script>
+
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+
+    showSlides(slideIndex += n);
+
+  }
+
+  function currentSlide(n) {
+
+    showSlides(slideIndex = n);
+
+  }
+
+  function showSlides(n) {
+
+    var i;
+    var slides = document.getElementsByClassName("mySlides4");
+    var dots = document.getElementsByClassName("dot4");
+
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+
+    for (i = 0; i < slides.length; i++) {
+
+        slides[i].style.display = "none"; 
+
+    }
+
+    for (i = 0; i < dots.length; i++) {
+
+        dots[i].className = dots[i].className.replace(" active4", "");
+
+    }
+
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active4";
+    
+  }
+
+</script>
+
+<!-- QUOTES SLIDESHOW END -->
+
+<!-- 
+  /
+  /
+  /
+  /
+  /
+ADVERTISMENT
+  /
+  /
+  /
+  /
+  /
+  /
+ -->
+
+  <div class="main3 container-fluid">
+    <h1>ADVERTISMENT</h1>
+    <hr>
+    <p>Lorem ipsum..</p>
+
+    <div class="row3">
+      <br>
+
+      <div class="column3">
+
+        <div class="card3">
+          <img src="assets/img/maokai.jpg" alt="Jane" style="width:100%">
+
+          <div class="container3">
+            <h2>Jane Doe</h2>
+            <p class="title3">CEO &amp; Founder</p>
+            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+            <p>example@example.com</p>
+            <p><button class="button3">Contact</button></p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="column3">
+
+        <div class="card3">
+          <img src="assets/img/maokai.jpg" alt="Mike" style="width:100%">
+            
+          <div class="container3">
+            <h2>Mike Ross</h2>
+            <p class="title3">Art Director</p>
+            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+            <p>example@example.com</p>
+            <p><button class="button3">Contact</button></p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="column3">
+
+        <div class="card3">
+          <img src="assets/img/maokai.jpg" alt="John" style="width:100%">
+
+          <div class="container3">
+            <h2>John Doe</h2>
+            <p class="title3">Designer</p>
+            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+            <p>example@example.com</p>
+            <p><button class="button3">Contact</button></p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+<!-- ADVERTISMENT END -->
+
+<!-- 
+  /
+  /
+  /
+  /
+  /
+FOOTER
+  /
+  /
+  /
+  /
+  /
+  /
+ -->
+
+  <div class="container5">
+
+    <form action="/action_page.php">
+
+      <div class="row5">
+        <h2 style="text-align:center" class="h25">Login with Social Media or Manually</h2>
+
+        <div class="vl5">
+          <span class="vl-innertext5">or</span>
+        </div>
+
+        <div class="col5">
+
+          <a href="#" class="fb5 btn5">
+            <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+          </a>
+
+          <a href="#" class="twitter5 btn5">
+            <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+          </a>
+
+          <a href="#" class="google5 btn5"><i class="fa fa-google fa-fw">
+            </i> Login with Google+
+          </a>
+
+        </div>
+
+        <div class="col5">
+
+          <div class="hide-md-lg">
+            <p>Or sign in manually:</p>
+          </div>
+
+          <input type="text" name="username" placeholder="Username" required class="input5">
+          <input type="password" name="password" placeholder="Password" required class="input5">
+          <input type="submit" value="Login" class="input5">
+        
+        </div>
+        
+      </div>
+
+    </form>
+
+  </div>
+
+  <div class="bottom-container5">
+
+    <div class="row5">
+
+      <div class="col5">
+        <a href="#" style="color:white" class="btn5">Sign up</a>
+      </div>
+
+      <div class="col5">
+        <a href="#" style="color:white" class="btn5">Forgot password?</a>
+      </div>
+
+    </div>
+
+  </div>
+
+<!-- FOOTER END -->
+
+<!-- 
+  /
+  /
+  /
+  /
+  /
+SCRIPTS
+  /
+  /
+  /
+  /
+  /
+  /
+ -->
+
+ <!-- script with API key from Google for map navigation -->
+ 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD061nS6ETdTVXK-EmL_xXRAtHvYaZAleM&callback=myMap"></script>
+
+  <!-- include all compiled plugins needed for java -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<!-- include all compiled plugins needed for bootstrap -->
+	<script src="assets/js/bootstrap.min.js"></script>
+
+<!-- SCRIPTS END -->
+
+</body>
+
+</html>
